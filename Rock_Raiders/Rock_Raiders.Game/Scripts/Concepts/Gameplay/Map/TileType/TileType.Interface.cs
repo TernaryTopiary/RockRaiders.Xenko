@@ -1,6 +1,6 @@
-﻿using Rock_Raiders.Scripts.Concepts.Gameplay;
+﻿using Rock_Raiders.Scripts.Concepts.Gameplay.Shared;
 
-namespace Rock_Raiders.Scripts.Concepts.Map.TileType
+namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 {
     public interface ITileType : ITooltipInformationDisplayable
     {

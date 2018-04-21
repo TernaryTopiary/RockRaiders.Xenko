@@ -1,4 +1,4 @@
-﻿namespace Rock_Raiders.Scripts.Concepts.Gameplay
+﻿namespace Rock_Raiders.Scripts.Concepts.Gameplay.Shared
 {
     public interface ITooltipInformationDisplayable
     {

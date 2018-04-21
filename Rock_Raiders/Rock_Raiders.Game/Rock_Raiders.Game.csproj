@@ -110,24 +110,31 @@
   <ItemGroup>
     <Compile Include="BasicCameraController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Concepts\Cosmic\Space\Orientation.cs" />
     <Compile Include="Scripts\Concepts\Cosmic\Time\PortableDouble.cs" />
     <Compile Include="Scripts\Concepts\Cosmic\Time\Time.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\ICreatable.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\IDamageable.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\IExpensive.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\IPositionable.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\ISelectable.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\ITakeTimeToCreateable.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\ITooltipInformationDisplayable.cs" />
-    <Compile Include="Scripts\Concepts\Map\BuildingType\BuildingType.Interface.cs" />
-    <Compile Include="Scripts\Constants\Constants.Map.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Resources\ResourceTypeCrystal.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Resources\ResourceTypeOre.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\ICreatable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IDamageable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IExpensive.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IPositionable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IRepairable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\ISelectable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\ITakeTimeToCreateable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\ITooltipInformationDisplayable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType\BuildingType.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType\BuildingType.Interface.cs" />
+    <Compile Include="Scripts\Concepts\Constants\Constants.Gameplay.cs" />
+    <Compile Include="Scripts\Concepts\Constants\Constants.Map.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IUpgradable.cs" />
     <Compile Include="Scripts\Game\Initialization.cs" />
-    <Compile Include="Scripts\Map\Components\Map.cs" />
-    <Compile Include="Scripts\Map\Components\Tile.cs" />
-    <Compile Include="Scripts\Concepts\Map\TileType\TileBiome.cs" />
-    <Compile Include="Scripts\Concepts\Map\TileType\TileType.Interface.cs" />
-    <Compile Include="Scripts\Concepts\Map\TileType\Ground\TileTypeGround.cs" />
-    <Compile Include="Scripts\Concepts\Map\TileType\Wall\TileTypeWall.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Map\Components\Map.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Map\Components\Tile.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\TileBiome.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\TileType.Interface.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\Ground\TileTypeGround.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\Wall\TileTypeWall.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

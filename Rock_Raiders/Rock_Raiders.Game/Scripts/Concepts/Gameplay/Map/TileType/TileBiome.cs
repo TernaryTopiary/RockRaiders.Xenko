@@ -1,4 +1,4 @@
-﻿namespace Rock_Raiders.Scripts.Concepts.Map.TileType
+﻿namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 {
     public interface ITileBiome
     {

@@ -1,4 +1,4 @@
-﻿namespace Rock_Raiders.Scripts.Concepts.Map.TileType.Ground
+﻿namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType.Ground
 {
     public class TileTypeTypeGroundSoil : ITileTypeSolidGround, ITileTypeBuildable
     {

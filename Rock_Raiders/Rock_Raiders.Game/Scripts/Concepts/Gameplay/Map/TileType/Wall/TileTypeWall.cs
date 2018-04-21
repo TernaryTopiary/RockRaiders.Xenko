@@ -1,4 +1,4 @@
-﻿namespace Rock_Raiders.Scripts.Concepts.Map.TileType.Wall
+﻿namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType.Wall
 {
     public class TileWallSoil : ITileTypeWallLightDrillable
     {

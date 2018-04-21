@@ -1,10 +1,9 @@
-﻿using Rock_Raiders.Scripts.Concepts.Gameplay;
-using Rock_Raiders.Scripts.Concepts.Map;
-using Rock_Raiders.Scripts.Concepts.Map.TileType;
-using Rock_Raiders.Scripts.Concepts.Map.TileType.Ground;
+﻿using Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType;
+using Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType.Ground;
+using Rock_Raiders.Scripts.Concepts.Gameplay.Shared;
 using SiliconStudio.Core.Mathematics;
 
-namespace Rock_Raiders.Scripts.Map.Components
+namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.Components
 {
     public interface ITile : IPositionable
     {
