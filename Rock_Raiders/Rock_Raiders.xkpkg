@@ -1,0 +1,40 @@
+!Package
+Id: 98199de3-227f-41de-81a0-81ef326fedd6
+SerializedVersion: {Assets: 0.0.4}
+Meta:
+    Name: Rock_Raiders
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: Rock_Raiders
+    Dependencies:
+        -   Name: Xenko
+            Version: 2.1.2.1
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: Rock_Raiders.Game/Effects
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 6bc4d592-eaa2-4f15-bc41-e0ae499ff52f
+                Location: Rock_Raiders.Game/Rock_Raiders.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: c691153a-ca23-402c-87fe-31f2fd8e9553
+                Location: Rock_Raiders.Windows/Rock_Raiders.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []
