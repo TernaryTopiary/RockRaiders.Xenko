@@ -1,9 +1,11 @@
 ﻿using Rock_Raiders.Scripts.Concepts.Cosmic.Time;
+using Rock_Raiders.Scripts.Concepts.Gameplay.Building.Components;
+using Rock_Raiders.Scripts.Concepts.Gameplay.Resource;
+using SiliconStudio.Core.Mathematics;
 using System;
 using System.Collections.Generic;
-using Rock_Raiders.Scripts.Concepts.Gameplay.Resource;
 
-namespace Rock_Raiders.Scripts.Concepts.Gameplay.Building.BuildingType
+namespace Rock_Raiders.Scripts.Concepts.Gameplay.Building
 {
     public class BuildingTypeToolStore : IBuildingType
     {
@@ -12,6 +14,16 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Building.BuildingType
         public Dictionary<Type, int> Cost { get; set; } = new Dictionary<Type, int>();
         public Seconds TimeToCreate { get; set; }
         public int DefaultHitpoints { get; set; }
+
+        private static IEnumerable<BuildingNode> ToolstoreX0Y0Nodes = new[] { BuildingNodes.ToolstoreBuildingX0Y0 };
+
+        public Point BuildingPivotCoordinates { get; set; } = new Point(0, 0);
+
+        public IBuildingTileLayout[,] DefaultTileLayout { get; set; } =
+        {
+            {new BuildingTileLayout<BuildingTileTypeFoundation>{ Nodes = ToolstoreX0Y0Nodes } },
+            {new BuildingTileLayout<BuildingTileTypeFoundation>()}
+        };
     }
 
     public class BuildingTypeTeleportPad : IBuildingType
@@ -21,6 +33,16 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Building.BuildingType
         public Dictionary<Type, int> Cost { get; set; } = new Dictionary<Type, int>() { { typeof(ResourceTypeOre), 8 } };
         public Seconds TimeToCreate { get; set; }
         public int DefaultHitpoints { get; set; }
+
+        private static IEnumerable<BuildingNode> TeleportPadX0Y0Nodes = new[] { BuildingNodes.BasePlate1x1, BuildingNodes.TeleportPadBuildingX0Y0 };
+
+        public Point BuildingPivotCoordinates { get; set; } = new Point(0, 0);
+
+        public IBuildingTileLayout[,] DefaultTileLayout { get; set; } =
+        {
+            {new BuildingTileLayout<BuildingTileTypeFoundation>{ Nodes = TeleportPadX0Y0Nodes } },
+            {new BuildingTileLayout<BuildingTileTypeFoundation>()}
+        };
     }
 
     public class BuildingTypeDocks : IBuildingType
@@ -36,6 +58,17 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Building.BuildingType
 
         public Seconds TimeToCreate { get; set; }
         public int DefaultHitpoints { get; set; }
+
+        private static IEnumerable<BuildingNode> DocksX0Y0Nodes = new[] { BuildingNodes.BasePlate1x1, BuildingNodes.DocksBuildingX0Y0 };
+
+        public Point BuildingPivotCoordinates { get; set; } = new Point(0, 1);
+
+        public IBuildingTileLayout[,] DefaultTileLayout { get; set; } =
+        {
+            {new BuildingTileLayout<BuildingTileTypeFoundation>()},
+            {new BuildingTileLayout<BuildingTileTypeFoundation>{ Nodes = DocksX0Y0Nodes } },
+            {new BuildingTileLayout<BuildingTileTypeEmpty>()}
+        };
     }
 
     public class BuildingTypePowerStation : IBuildingType

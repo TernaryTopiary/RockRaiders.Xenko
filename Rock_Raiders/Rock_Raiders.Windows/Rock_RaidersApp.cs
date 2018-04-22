@@ -6,7 +6,7 @@ namespace Rock_Raiders
     {
         static void Main(string[] args)
         {
-            using (var game = new Game())
+            using (var game = new SiliconStudio.Xenko.Engine.Game())
             {
                 game.Run();
             }

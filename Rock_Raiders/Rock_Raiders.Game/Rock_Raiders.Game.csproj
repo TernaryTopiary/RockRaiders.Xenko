@@ -113,6 +113,9 @@
     <Compile Include="Scripts\Concepts\Cosmic\Space\Orientation.cs" />
     <Compile Include="Scripts\Concepts\Cosmic\Time\PortableDouble.cs" />
     <Compile Include="Scripts\Concepts\Cosmic\Time\Time.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingTileType.Interface.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\Components\BuildingNode.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingTileLayout.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Resource\ResourceTypeCrystal.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Resource\ResourceTypeOre.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ICreatable.cs" />
@@ -125,21 +128,22 @@
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ISelectable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ITakeTimeToCreateable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ITooltipInformationDisplayable.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType\BuildingType.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType\BuildingType.Interface.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType.Interface.cs" />
     <Compile Include="Scripts\Concepts\Constants\Constants.Gameplay.cs" />
     <Compile Include="Scripts\Concepts\Constants\Constants.Map.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ITransportable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\IUpgradable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Vehicle\VehicleType\VehicleType.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Vehicle\VehicleType\VehicleType.Interface.cs" />
-    <Compile Include="Scripts\Game\Initialization.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\Components\Map.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\Components\Tile.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\TileBiome.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\TileType.Interface.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\Ground\TileTypeGround.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\TileType\Wall\TileTypeWall.cs" />
+    <Compile Include="Scripts\Game\Initialize.cs" />
+    <Compile Include="Scripts\TestScript1.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

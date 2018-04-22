@@ -2,7 +2,10 @@
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Extensions;
+using SiliconStudio.Xenko.Graphics.GeometricPrimitives;
 using SiliconStudio.Xenko.Input;
+using SiliconStudio.Xenko.Rendering;
 
 namespace Rock_Raiders
 {
