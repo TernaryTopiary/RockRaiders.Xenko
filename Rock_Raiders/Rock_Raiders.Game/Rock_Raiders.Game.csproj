@@ -113,11 +113,13 @@
     <Compile Include="Scripts\Concepts\Cosmic\Space\Orientation.cs" />
     <Compile Include="Scripts\Concepts\Cosmic\Time\PortableDouble.cs" />
     <Compile Include="Scripts\Concepts\Cosmic\Time\Time.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\Resources\ResourceTypeCrystal.cs" />
-    <Compile Include="Scripts\Concepts\Gameplay\Resources\ResourceTypeOre.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Resource\ResourceTypeCrystal.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Resource\ResourceTypeOre.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ICreatable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\IDamageable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IDependent.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\IExpensive.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\IMoveable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\IPositionable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\IRepairable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\ISelectable.cs" />
@@ -127,7 +129,10 @@
     <Compile Include="Scripts\Concepts\Gameplay\Building\BuildingType\BuildingType.Interface.cs" />
     <Compile Include="Scripts\Concepts\Constants\Constants.Gameplay.cs" />
     <Compile Include="Scripts\Concepts\Constants\Constants.Map.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Shared\ITransportable.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Shared\IUpgradable.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Vehicle\VehicleType\VehicleType.cs" />
+    <Compile Include="Scripts\Concepts\Gameplay\Vehicle\VehicleType\VehicleType.Interface.cs" />
     <Compile Include="Scripts\Game\Initialization.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\Components\Map.cs" />
     <Compile Include="Scripts\Concepts\Gameplay\Map\Components\Tile.cs" />

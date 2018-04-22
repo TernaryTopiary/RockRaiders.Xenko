@@ -1,7 +1,7 @@
 ﻿using Rock_Raiders.Scripts.Concepts.Cosmic.Time;
-using Rock_Raiders.Scripts.Concepts.Gameplay.Resources;
 using System;
 using System.Collections.Generic;
+using Rock_Raiders.Scripts.Concepts.Gameplay.Resource;
 
 namespace Rock_Raiders.Scripts.Concepts.Gameplay.Building.BuildingType
 {
