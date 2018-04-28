@@ -1,4 +1,5 @@
 ﻿using Rock_Raiders.Scripts.Concepts.Gameplay.Shared;
+using Rock_Raiders.Scripts.Miscellaneous;
 
 namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 {
@@ -13,7 +14,6 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 
     public interface ITileTypeWallReinforcable : ITileTypeWall
     {
-        bool IsHighlightedToReinforce { get; set; }
     }
 
     public interface ITileTypeWallDamageable : ITileTypeWall, ISelectable, IDamageable
@@ -26,7 +26,6 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 
     public interface ITileTypeWallDynamitable : ITileTypeWallDamageable
     {
-        bool IsHighlightedToDynamite { get; set; }
     }
 
     public interface ITileTypeTraversable : ITileType
@@ -39,7 +38,6 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 
     public interface ITileTypeBuildable : ITileType
     {
-        bool IsHighlightedToBuild { get; set; }
     }
 
     public interface ITileTypeGround : ITileType
@@ -61,7 +59,6 @@ namespace Rock_Raiders.Scripts.Concepts.Gameplay.Map.TileType
 
     public interface ITileTypeWallDrillable : ITileTypeWallReinforcable, ITileTypeWallDamageable
     {
-        bool IsHighlightedToDrill { get; set; }
     }
 
     public interface ITileTypeWallLightDrillable : ITileTypeTypeWallHeavyDrillable
