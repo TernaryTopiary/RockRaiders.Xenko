@@ -1,11 +1,12 @@
-﻿using System;
-using SiliconStudio.Core;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Extensions;
-using SiliconStudio.Xenko.Graphics.GeometricPrimitives;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Rendering;
+using System;
+using Xenko.Core;
+using Xenko.Core.Mathematics;
+using Xenko.Engine;
+using Xenko.Extensions;
+using Xenko.Games;
+using Xenko.Graphics.GeometricPrimitives;
+using Xenko.Input;
+using Xenko.Rendering;
 
 namespace Rock_Raiders
 {
@@ -19,6 +20,12 @@ namespace Rock_Raiders
     public class BasicCameraController : SyncScript
     {
         private const float MaximumPitch = MathUtil.PiOverTwo * 0.99f;
+
+        private const int EdgeScreenScrollThickness = 15;
+        // The distance from the window over which we stop scrolling. So your camera doesn't scroll if you go off and do something else.
+        private const int EdgeScreenOverflowThickness = 0;
+
+        public int LevelArea { get; set; } = 100;
 
         private Vector3 upVector;
         private Vector3 translation;
@@ -64,21 +71,32 @@ namespace Rock_Raiders
             yaw = 0;
             pitch = 0;
 
+            var windowBounds = Game.Window.ClientBounds;
+            var mousePos = new Vector2(Input.Mouse.Position.X * windowBounds.Width, Input.Mouse.Position.Y * windowBounds.Height);
+
             // Move with keyboard
-            if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
+            if (Input.IsKeyDown(Keys.W) || 
+                Input.IsKeyDown(Keys.Up) ||
+                mousePos.Y >= EdgeScreenOverflowThickness && mousePos.Y < EdgeScreenScrollThickness)
             {
                 translation.Z = -KeyboardMovementSpeed.Z;
             }
-            else if (Input.IsKeyDown(Keys.S) || Input.IsKeyDown(Keys.Down))
+            else if (Input.IsKeyDown(Keys.S) || 
+                     Input.IsKeyDown(Keys.Down) ||
+                     mousePos.Y <= windowBounds.Size.Height && mousePos.Y > windowBounds.Size.Height - EdgeScreenScrollThickness)
             {
                 translation.Z = KeyboardMovementSpeed.Z;
             }
 
-            if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
+            if (Input.IsKeyDown(Keys.A) || 
+                Input.IsKeyDown(Keys.Left) ||
+                mousePos.X >= EdgeScreenOverflowThickness && mousePos.X < EdgeScreenScrollThickness)
             {
                 translation.X = -KeyboardMovementSpeed.X;
             }
-            else if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right))
+            else if (Input.IsKeyDown(Keys.D) || 
+                     Input.IsKeyDown(Keys.Right) ||
+                     mousePos.X <= windowBounds.Size.Width && mousePos.X > windowBounds.Size.Width - EdgeScreenScrollThickness)
             {
                 translation.X = KeyboardMovementSpeed.X;
             }
